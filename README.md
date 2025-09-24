@@ -6,22 +6,32 @@ Includes basic order validation, logging, and optional advanced strategies like 
 
 ---
 
-## Folder Structure
-prajakta-binance-bot/
-├── src/
-│ ├── market_orders.py → Market order logic
-│ ├── limit_orders.py → Limit order logic
-│ ├── validation.py → Order validation
-│ ├── logger.py → Logging setup
-│ ├── test_all_orders.py → Test all order types
-│ └── advanced/
-│ ├── oco.py → OCO order logic
-│ ├── twap.py → TWAP strategy
-│ └── grid_strategy.py → Grid strategy (optional)
-├── bot.log → Logs for dry-run & API executions
-├── README.md → Project documentation
-└── report.pdf → Screenshots & explanations
+## Features
+- **Market Orders**: Instant buy/sell at market price.  
+- **Limit Orders**: Buy/sell at a specific price.  
+- **OCO Orders**: Combines take-profit and stop-limit in a single order.  
+- **Logging**: All actions, errors, and dry-run outputs saved in `src/bot.log`.  
+- **Advanced Orders**: TWAP and Grid strategies available in `src/advanced/`.
 
+---
+
+## Project Structure
+
+### Backend: `prajakta-binance-bot/src/`
+- `market_orders.py` → Market order logic
+- `limit_orders.py` → Limit order logic
+- `validation.py` → Order validation
+- `logger.py` → Logging setup
+- `test_all_orders.py` → Test all order types
+- `advanced/`
+  - `oco.py` → OCO order logic
+  - `twap.py` → TWAP strategy
+  - `grid_strategy.py` → Grid strategy (optional)
+
+### Root Files
+- `bot.log` → Logs for dry-run & API executions
+- `README.md` → Project documentation
+- `report.pdf` → Screenshots & explanations
 
 ---
 
@@ -30,7 +40,7 @@ prajakta-binance-bot/
 ### 1. Clone Repository
 ```bash
 git clone https://github.com/prajaktaukirde/prajakta-binance-bot.git
-cd prajaktaukirde-binance-bot
+cd prajaktaukirde-bot
 
 2. Create Virtual Environment
 python -m venv venv
