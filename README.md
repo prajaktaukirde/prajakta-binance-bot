@@ -30,8 +30,7 @@ prajakta-binance-bot/
 ├── README.md # Project documentation
 └── report.pdf # Screenshots & explanations
 
-bash
-Copy code
+
 
 ## Setup
 
