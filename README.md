@@ -32,8 +32,10 @@ Includes basic order validation, logging, and optional advanced strategies like 
 - `bot.log` → Logs for dry-run & API executions
 - `README.md` → Project documentation
 - `report.pdf` → Screenshots & explanations
-
 ---
+
+<img width="700" height="300" alt="Screenshot 2025-09-24 075611" src="https://github.com/user-attachments/assets/9cfa4b92-5bf0-4403-81f8-65762d763e73" />
+
 
 ## Setup
 
@@ -88,3 +90,8 @@ Notes
 Ensure your virtual environment is active before running commands.
 Advanced strategies (TWAP/Grid) are optional but included for bonus evaluation.
 All logs help track executions and debug issues.
+
+Resources
+Binance Futures API Docs: https://binance-docs.github.io/apidocs/futures/en/
+Historical Data (Optional): Google Drive
+Fear & Greed Index (Bonus): Google Drive
