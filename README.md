@@ -1,43 +1,123 @@
-# Prajakta Ukirde - Binance Futures Order Bot (Example Submission)
-## Project structure
+# Prajakta Binance Bot
+
+## Overview
+This is a Python-based Binance Futures trading bot that supports **Market**, **Limit**, and **OCO (One Cancels Other)** orders.  
+It includes basic order validation and logging. Optional advanced strategies like **TWAP** and **Grid** are also included.
+
+---
+
+## Features
+- **Market Orders**: Instant buy/sell at market price.  
+- **Limit Orders**: Buy/sell at a specific price.  
+- **OCO Orders**: Combines take-profit and stop-limit in a single order.  
+- **Logging**: All actions, errors, and dry-run outputs are logged to `bot.log`.  
+- **Advanced Orders (Bonus)**: TWAP and Grid strategies implemented in `src/advanced/`.
+
+---
+
+## Folder Structure
+
 prajakta-binance-bot/
-├─ src/
-│  ├─ logger.py
-│  ├─ market_orders.py
-│  ├─ limit_orders.py
-│  └─ advanced/
-│     ├─ oco.py
-│     ├─ twap.py
-│     └─ grid_strategy.py
-├─ bot.log
-├─ report.pdf
-└─ README.md
+│
+├── src/
+│ ├── market_orders.py # Market order logic
+│ ├── limit_orders.py # Limit order logic
+│ ├── validation.py # Order validation functions
+│ ├── logger.py # Logging setup
+│ ├── test_all_orders.py # Test all order types
+│ └── advanced/
+│ ├── oco.py # OCO order logic
+│ ├── twap.py # TWAP strategy
+│ └── grid_strategy.py # Grid strategy (optional)
+│
+├── bot.log # Logs of API calls & dry-run executions
+├── README.md # Project documentation
+└── report.pdf # Screenshots & explanations
 
-## Requirements
-- Python 3.8+
-- (Optional) python-binance if you want to extend to live trading: `pip install python-binance`
-- No API keys are stored in this example. If you want to enable live trading, set environment variables:
-  - BINANCE_API_KEY
-  - BINANCE_API_SECRET
+yaml
+Copy code
 
-## How to run (dry-run)
-Examples:
-- Market order (dry-run):
-  `python src/market_orders.py BTCUSDT BUY 0.001 --dry`
-- Limit order (dry-run):
-  `python src/limit_orders.py BTCUSDT SELL 0.001 45000 --dry`
-- TWAP (dry-run):
-  ```python -c "from src.advanced.twap import execute_twap; execute_twap('BTCUSDT','BUY',0.01,intervals=4,interval_seconds=5,dry=True)"```
+---
 
-## Notes on safety & validation
-- All example scripts default to **dry-run**. They validate symbol, side, quantity and price inputs.
-- Live order placement is intentionally not implemented in this sample. Extend with `python-binance` and proper API key handling for live use.
-- Logging is configured to write `bot.log` in the project root.
+## Setup
 
-## What to include in the final submission (per assignment)
-- A filled `report.pdf` with screenshots and explanation (placeholder included).
-- Detailed README covering API setup and how to run scripts.
-- Structured `bot.log` produced during your runs.
+1. **Clone the repository**  
 
-## License
-MIT
+```bash
+git clone https://github.com/prajaktaukirde/prajakta-binance-bot.git
+cd prajakta-binance-bot
+Create a virtual environment and activate it
+
+bash
+Copy code
+python -m venv venv
+venv\Scripts\activate  # Windows
+# source venv/bin/activate  # Mac/Linux
+Install dependencies
+
+bash
+Copy code
+pip install -r requirements.txt
+API Setup
+
+Create a .env file in src/ with your Binance API keys:
+
+ini
+Copy code
+API_KEY=your_binance_api_key
+API_SECRET=your_binance_api_secret
+How to Run
+Test all orders in dry-run mode:
+
+bash
+Copy code
+python src/test_all_orders.py
+Run individual orders:
+
+bash
+Copy code
+python src/market_orders.py BTCUSDT BUY 0.01
+python src/limit_orders.py BTCUSDT SELL 0.01 45000
+Advanced OCO order (dry-run):
+
+python
+Copy code
+from advanced.oco import execute_oco
+execute_oco(
+    symbol="BTCUSDT",
+    side="BUY",
+    qty=0.001,
+    stop_price=44000,
+    stop_limit_price=43990,
+    dry=True
+)
+Notes
+The project is currently set up for dry-run mode. Remove dry=True to execute real trades.
+
+Check your OCO take-profit and stop prices before real execution.
+
+Logs are stored in src/bot.log with timestamps and error traces.
+
+Resources
+Binance Futures API Documentation
+
+Historical Data (Optional)
+
+Fear & Greed Index (Bonus)
+
+Author
+Prajakta Ukirde
+GitHub: https://github.com/prajaktaukirde
+
+yaml
+Copy code
+
+---
+
+
+
+
+
+
+
+Ask ChatGPT
