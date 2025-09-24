@@ -1,0 +1,6 @@
+2025-09-24 06:32:56,153 INFO market_orders Preparing MARKET order | BTCUSDT BUY 0.001
+2025-09-24 06:32:56,153 INFO market_orders [DRY RUN] Order prepared: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2025-09-24 06:32:56,153 INFO market_orders Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}}
+2025-09-24 06:33:17,946 INFO limit_orders Preparing LIMIT order | BTCUSDT SELL 0.001 @ 45000.0
+2025-09-24 06:33:17,947 INFO limit_orders [DRY RUN] Limit order prepared: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000.0}
+2025-09-24 06:33:17,947 INFO limit_orders Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000.0}}

@@ -1,0 +1,145 @@
+2025-09-24 06:39:41,615 INFO oco Preparing OCO for BTCUSDT
+2025-09-24 06:39:41,615 INFO oco [DRY RUN] OCO prepared: {'take_profit': {'type': 'LIMIT', 'side': 'SELL', 'price': 45000, 'quantity': 0.001}, 'stop_limit': {'type': 'STOP_LIMIT', 'side': 'SELL', 'stopPrice': 44000, 'price': 43990, 'quantity': 0.001}}
+2025-09-24 06:40:36,855 INFO twap TWAP: BTCUSDT BUY total=0.01 into 3 chunks
+2025-09-24 06:40:36,855 INFO twap [DRY RUN] TWAP chunk prepared: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.00333333, 'chunk_index': 1}
+2025-09-24 06:40:36,855 INFO twap [DRY RUN] TWAP chunk prepared: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.00333333, 'chunk_index': 2}
+2025-09-24 06:40:36,856 INFO twap [DRY RUN] TWAP chunk prepared: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.00333333, 'chunk_index': 3}
+2025-09-24 06:41:14,434 INFO grid_strategy Preparing Grid Strategy for BTCUSDT
+2025-09-24 06:41:14,434 INFO grid_strategy [DRY RUN] Grid prepared: [{'buy': {'price': 43000.0, 'quantity': 0.01}, 'sell': {'price': 43400.0, 'quantity': 0.01}}, {'buy': {'price': 43400.0, 'quantity': 0.01}, 'sell': {'price': 43800.0, 'quantity': 0.01}}, {'buy': {'price': 43800.0, 'quantity': 0.01}, 'sell': {'price': 44200.0, 'quantity': 0.01}}, {'buy': {'price': 44200.0, 'quantity': 0.01}, 'sell': {'price': 44600.0, 'quantity': 0.01}}, {'buy': {'price': 44600.0, 'quantity': 0.01}, 'sell': {'price': 45000.0, 'quantity': 0.01}}]
+2025-09-24 06:46:53,491 INFO market_orders Preparing MARKET order | BTCUSDT BUY 0.001
+2025-09-24 06:46:53,491 INFO market_orders [DRY RUN] Order prepared: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2025-09-24 06:47:07,874 INFO limit_orders Preparing LIMIT order | BTCUSDT SELL 0.001 @ 45000
+2025-09-24 06:47:07,875 INFO limit_orders [DRY RUN] Limit order prepared: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}
+2025-09-24 06:47:27,730 INFO oco Preparing OCO for BTCUSDT
+2025-09-24 06:47:27,731 INFO oco [DRY RUN] OCO prepared: {'take_profit': {'type': 'LIMIT', 'side': 'SELL', 'price': 45000, 'quantity': 0.001}, 'stop_limit': {'type': 'STOP_LIMIT', 'side': 'SELL', 'stopPrice': 44000, 'price': 43990, 'quantity': 0.001}}
+2025-09-24 06:47:34,173 INFO grid_strategy Preparing Grid Strategy for BTCUSDT
+2025-09-24 06:47:34,174 INFO grid_strategy [DRY RUN] Grid prepared: [{'buy': {'price': 43000.0, 'quantity': 0.01}, 'sell': {'price': 43400.0, 'quantity': 0.01}}, {'buy': {'price': 43400.0, 'quantity': 0.01}, 'sell': {'price': 43800.0, 'quantity': 0.01}}, {'buy': {'price': 43800.0, 'quantity': 0.01}, 'sell': {'price': 44200.0, 'quantity': 0.01}}, {'buy': {'price': 44200.0, 'quantity': 0.01}, 'sell': {'price': 44600.0, 'quantity': 0.01}}, {'buy': {'price': 44600.0, 'quantity': 0.01}, 'sell': {'price': 45000.0, 'quantity': 0.01}}]
+2025-09-24 06:50:19,649 INFO bot_test === Testing Market Order ===
+2025-09-24 06:50:19,649 INFO market_orders Preparing MARKET order | BTCUSDT BUY 0.001
+2025-09-24 06:50:19,649 INFO market_orders [DRY RUN] Order prepared: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2025-09-24 06:50:19,649 INFO bot_test Market Order Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}}
+2025-09-24 06:50:19,649 INFO bot_test === Testing Limit Order ===
+2025-09-24 06:50:19,649 INFO limit_orders Preparing LIMIT order | BTCUSDT SELL 0.001 @ 45000
+2025-09-24 06:50:19,649 INFO limit_orders [DRY RUN] Limit order prepared: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}
+2025-09-24 06:50:19,662 INFO bot_test Limit Order Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}}
+2025-09-24 06:50:19,662 INFO bot_test === Testing OCO Order ===
+2025-09-24 06:51:49,744 INFO bot_test === Testing Market Order ===
+2025-09-24 06:51:49,744 INFO market_orders Preparing MARKET order | BTCUSDT BUY 0.001
+2025-09-24 06:51:49,744 INFO market_orders [DRY RUN] Order prepared: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2025-09-24 06:51:49,744 INFO bot_test Market Order Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}}
+2025-09-24 06:51:49,744 INFO bot_test === Testing Limit Order ===
+2025-09-24 06:51:49,745 INFO limit_orders Preparing LIMIT order | BTCUSDT SELL 0.001 @ 45000
+2025-09-24 06:51:49,745 INFO limit_orders [DRY RUN] Limit order prepared: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}
+2025-09-24 06:51:49,745 INFO bot_test Limit Order Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}}
+2025-09-24 06:51:49,745 INFO bot_test === Testing OCO Order ===
+2025-09-24 06:51:56,080 INFO bot_test === Testing Market Order ===
+2025-09-24 06:51:56,080 INFO market_orders Preparing MARKET order | BTCUSDT BUY 0.001
+2025-09-24 06:51:56,080 INFO market_orders [DRY RUN] Order prepared: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2025-09-24 06:51:56,080 INFO bot_test Market Order Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}}
+2025-09-24 06:51:56,080 INFO bot_test === Testing Limit Order ===
+2025-09-24 06:51:56,081 INFO limit_orders Preparing LIMIT order | BTCUSDT SELL 0.001 @ 45000
+2025-09-24 06:51:56,081 INFO limit_orders [DRY RUN] Limit order prepared: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}
+2025-09-24 06:51:56,081 INFO bot_test Limit Order Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}}
+2025-09-24 06:51:56,081 INFO bot_test === Testing OCO Order ===
+2025-09-24 06:53:07,210 INFO bot_test === Testing Market Order ===
+2025-09-24 06:53:07,211 INFO market_orders Preparing MARKET order | BTCUSDT BUY 0.001
+2025-09-24 06:53:07,211 INFO market_orders [DRY RUN] Order prepared: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2025-09-24 06:53:07,211 INFO bot_test Market Order Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}}
+2025-09-24 06:53:07,211 INFO bot_test === Testing Limit Order ===
+2025-09-24 06:53:07,211 INFO limit_orders Preparing LIMIT order | BTCUSDT SELL 0.001 @ 45000
+2025-09-24 06:53:07,211 INFO limit_orders [DRY RUN] Limit order prepared: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}
+2025-09-24 06:53:07,212 INFO bot_test Limit Order Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}}
+2025-09-24 06:53:07,212 INFO bot_test === Testing OCO Order ===
+2025-09-24 06:53:45,805 INFO bot_test === Testing Market Order ===
+2025-09-24 06:53:45,805 INFO market_orders Preparing MARKET order | BTCUSDT BUY 0.001
+2025-09-24 06:53:45,806 INFO market_orders [DRY RUN] Order prepared: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2025-09-24 06:53:45,806 INFO bot_test Market Order Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}}
+2025-09-24 06:53:45,806 INFO bot_test === Testing Limit Order ===
+2025-09-24 06:53:45,806 INFO limit_orders Preparing LIMIT order | BTCUSDT SELL 0.001 @ 45000
+2025-09-24 06:53:45,807 INFO limit_orders [DRY RUN] Limit order prepared: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}
+2025-09-24 06:53:45,807 INFO bot_test Limit Order Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}}
+2025-09-24 06:53:45,807 INFO bot_test === Testing OCO Order ===
+2025-09-24 06:54:44,423 INFO bot_test === Testing Market Order ===
+2025-09-24 06:54:44,424 INFO market_orders Preparing MARKET order | BTCUSDT BUY 0.001
+2025-09-24 06:54:44,424 INFO market_orders [DRY RUN] Order prepared: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2025-09-24 06:54:44,424 INFO bot_test Market Order Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}}
+2025-09-24 06:54:44,424 INFO bot_test === Testing Limit Order ===
+2025-09-24 06:54:44,425 INFO limit_orders Preparing LIMIT order | BTCUSDT SELL 0.001 @ 45000
+2025-09-24 06:54:44,425 INFO limit_orders [DRY RUN] Limit order prepared: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}
+2025-09-24 06:54:44,425 INFO bot_test Limit Order Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}}
+2025-09-24 06:54:44,425 INFO bot_test === Testing OCO Order ===
+2025-09-24 06:55:29,240 INFO bot_test === Testing Market Order ===
+2025-09-24 06:55:29,240 INFO market_orders Preparing MARKET order | BTCUSDT BUY 0.001
+2025-09-24 06:55:29,240 INFO market_orders [DRY RUN] Order prepared: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2025-09-24 06:55:29,240 INFO bot_test Market Order Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}}
+2025-09-24 06:55:29,241 INFO bot_test === Testing Limit Order ===
+2025-09-24 06:55:29,241 INFO limit_orders Preparing LIMIT order | BTCUSDT SELL 0.001 @ 45000
+2025-09-24 06:55:29,241 INFO limit_orders [DRY RUN] Limit order prepared: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}
+2025-09-24 06:55:29,241 INFO bot_test Limit Order Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}}
+2025-09-24 06:55:29,241 INFO bot_test === Testing OCO Order ===
+2025-09-24 06:56:10,332 INFO bot_test === Testing Market Order ===
+2025-09-24 06:56:10,332 INFO market_orders Preparing MARKET order | BTCUSDT BUY 0.001
+2025-09-24 06:56:10,333 INFO market_orders [DRY RUN] Order prepared: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2025-09-24 06:56:10,333 INFO bot_test Market Order Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}}
+2025-09-24 06:56:10,333 INFO bot_test === Testing Limit Order ===
+2025-09-24 06:56:10,333 INFO limit_orders Preparing LIMIT order | BTCUSDT SELL 0.001 @ 45000
+2025-09-24 06:56:10,333 INFO limit_orders [DRY RUN] Limit order prepared: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}
+2025-09-24 06:56:10,333 INFO bot_test Limit Order Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}}
+2025-09-24 06:56:10,333 INFO bot_test === Testing OCO Order ===
+2025-09-24 06:56:10,333 INFO oco Preparing OCO for BTCUSDT
+2025-09-24 06:56:10,333 INFO oco [DRY RUN] OCO prepared: {'take_profit': {'type': 'LIMIT', 'side': 'SELL', 'price': 44000, 'quantity': 0.001}, 'stop_limit': {'type': 'STOP_LIMIT', 'side': 'SELL', 'stopPrice': 45000, 'price': 44990, 'quantity': 0.001}}
+2025-09-24 06:56:10,333 INFO bot_test OCO Order Result: {'status': 'dry', 'oco': {'take_profit': {'type': 'LIMIT', 'side': 'SELL', 'price': 44000, 'quantity': 0.001}, 'stop_limit': {'type': 'STOP_LIMIT', 'side': 'SELL', 'stopPrice': 45000, 'price': 44990, 'quantity': 0.001}}}
+2025-09-24 07:01:22,097 INFO bot_test === Testing Market Order ===
+2025-09-24 07:01:22,098 INFO market_orders Preparing MARKET order | BTCUSDT BUY 0.001
+2025-09-24 07:01:22,098 INFO market_orders [DRY RUN] Order prepared: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2025-09-24 07:01:22,098 INFO bot_test Market Order Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}}
+2025-09-24 07:01:22,098 INFO bot_test === Testing Limit Order ===
+2025-09-24 07:01:22,098 INFO limit_orders Preparing LIMIT order | BTCUSDT SELL 0.001 @ 45000
+2025-09-24 07:01:22,099 INFO limit_orders [DRY RUN] Limit order prepared: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}
+2025-09-24 07:01:22,099 INFO bot_test Limit Order Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}}
+2025-09-24 07:01:22,099 INFO bot_test === Testing OCO Order ===
+2025-09-24 07:03:08,078 INFO bot_test === Testing Market Order ===
+2025-09-24 07:03:08,079 INFO market_orders Preparing MARKET order | BTCUSDT BUY 0.001
+2025-09-24 07:03:08,079 INFO market_orders [DRY RUN] Order prepared: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2025-09-24 07:03:08,079 INFO bot_test Market Order Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}}
+2025-09-24 07:03:08,079 INFO bot_test === Testing Limit Order ===
+2025-09-24 07:03:08,080 INFO limit_orders Preparing LIMIT order | BTCUSDT SELL 0.001 @ 45000
+2025-09-24 07:03:08,080 INFO limit_orders [DRY RUN] Limit order prepared: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}
+2025-09-24 07:03:08,080 INFO bot_test Limit Order Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}}
+2025-09-24 07:03:08,080 INFO bot_test === Testing OCO Order ===
+2025-09-24 07:03:08,081 INFO oco Preparing OCO for BTCUSDT
+2025-09-24 07:03:08,081 INFO oco [DRY RUN] OCO prepared: {'take_profit': {'type': 'LIMIT', 'side': 'SELL', 'price': 43990, 'quantity': 0.001}, 'stop_limit': {'type': 'STOP_LIMIT', 'side': 'SELL', 'stopPrice': 44000, 'price': 43990, 'quantity': 0.001}}
+2025-09-24 07:03:08,081 INFO bot_test OCO Order Result: {'status': 'dry', 'oco': {'take_profit': {'type': 'LIMIT', 'side': 'SELL', 'price': 43990, 'quantity': 0.001}, 'stop_limit': {'type': 'STOP_LIMIT', 'side': 'SELL', 'stopPrice': 44000, 'price': 43990, 'quantity': 0.001}}}
+2025-09-24 07:04:24,478 INFO bot_test === Testing Market Order ===
+2025-09-24 07:04:24,478 INFO market_orders Preparing MARKET order | BTCUSDT BUY 0.001
+2025-09-24 07:04:24,478 INFO market_orders [DRY RUN] Order prepared: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2025-09-24 07:04:24,478 INFO bot_test Market Order Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}}
+2025-09-24 07:04:24,478 INFO bot_test === Testing Limit Order ===
+2025-09-24 07:04:24,478 INFO limit_orders Preparing LIMIT order | BTCUSDT SELL 0.001 @ 45000
+2025-09-24 07:04:24,478 INFO limit_orders [DRY RUN] Limit order prepared: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}
+2025-09-24 07:04:24,478 INFO bot_test Limit Order Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}}
+2025-09-24 07:04:24,478 INFO bot_test === Testing OCO Order ===
+2025-09-24 07:06:02,449 INFO bot_test === Testing Market Order ===
+2025-09-24 07:06:02,449 INFO market_orders Preparing MARKET order | BTCUSDT BUY 0.001
+2025-09-24 07:06:02,450 INFO market_orders [DRY RUN] Order prepared: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2025-09-24 07:06:02,450 INFO bot_test Market Order Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}}
+2025-09-24 07:06:02,450 INFO bot_test === Testing Limit Order ===
+2025-09-24 07:06:02,450 INFO limit_orders Preparing LIMIT order | BTCUSDT SELL 0.001 @ 45000
+2025-09-24 07:06:02,450 INFO limit_orders [DRY RUN] Limit order prepared: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}
+2025-09-24 07:06:02,450 INFO bot_test Limit Order Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}}
+2025-09-24 07:06:02,450 INFO bot_test === Testing OCO Order ===
+2025-09-24 07:06:02,450 INFO oco Preparing OCO for BTCUSDT
+2025-09-24 07:06:02,451 INFO oco [DRY RUN] OCO prepared: {'take_profit': {'type': 'LIMIT', 'side': 'SELL', 'price': 43990, 'quantity': 0.001}, 'stop_limit': {'type': 'STOP_LIMIT', 'side': 'SELL', 'stopPrice': 45000, 'price': 44990, 'quantity': 0.001}}
+2025-09-24 07:06:02,451 INFO bot_test OCO Order Result: {'status': 'dry', 'oco': {'take_profit': {'type': 'LIMIT', 'side': 'SELL', 'price': 43990, 'quantity': 0.001}, 'stop_limit': {'type': 'STOP_LIMIT', 'side': 'SELL', 'stopPrice': 45000, 'price': 44990, 'quantity': 0.001}}}
+2025-09-24 07:07:47,183 INFO bot_test === Testing Market Order ===
+2025-09-24 07:07:47,183 INFO market_orders Preparing MARKET order | BTCUSDT BUY 0.001
+2025-09-24 07:07:47,184 INFO market_orders [DRY RUN] Order prepared: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2025-09-24 07:07:47,184 INFO bot_test Market Order Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}}
+2025-09-24 07:07:47,184 INFO bot_test === Testing Limit Order ===
+2025-09-24 07:07:47,184 INFO limit_orders Preparing LIMIT order | BTCUSDT SELL 0.001 @ 45000
+2025-09-24 07:07:47,184 INFO limit_orders [DRY RUN] Limit order prepared: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}
+2025-09-24 07:07:47,184 INFO bot_test Limit Order Result: {'status': 'dry', 'order': {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 45000}}
+2025-09-24 07:07:47,184 INFO bot_test === Testing OCO Order ===
+2025-09-24 07:07:47,184 INFO oco Preparing OCO for BTCUSDT
+2025-09-24 07:07:47,185 INFO oco [DRY RUN] OCO prepared: {'take_profit': {'type': 'LIMIT', 'side': 'SELL', 'price': 45000, 'quantity': 0.001}, 'stop_limit': {'type': 'STOP_LIMIT', 'side': 'SELL', 'stopPrice': 44000, 'price': 43990, 'quantity': 0.001}}
+2025-09-24 07:07:47,185 INFO bot_test OCO Order Result: {'status': 'dry', 'oco': {'take_profit': {'type': 'LIMIT', 'side': 'SELL', 'price': 45000, 'quantity': 0.001}, 'stop_limit': {'type': 'STOP_LIMIT', 'side': 'SELL', 'stopPrice': 44000, 'price': 43990, 'quantity': 0.001}}}
