@@ -1,18 +1,21 @@
 # Prajakta Binance Bot
 
 ## Overview
-This is a Python-based Binance Futures trading bot that supports **Market**, **Limit**, and **OCO (One Cancels Other)** orders.  
-It includes basic order validation and logging. Optional advanced strategies like **TWAP** and **Grid** are also included.
+A Python-based Binance Futures trading bot that supports **Market**, **Limit**, and **OCO (One Cancels Other)** orders.  
+Includes basic order validation, logging, and optional advanced strategies like **TWAP** and **Grid**.
+
+---
 
 ## Features
 - **Market Orders**: Instant buy/sell at market price.  
 - **Limit Orders**: Buy/sell at a specific price.  
 - **OCO Orders**: Combines take-profit and stop-limit in a single order.  
-- **Logging**: All actions, errors, and dry-run outputs are logged to `bot.log`.  
-- **Advanced Orders (Bonus)**: TWAP and Grid strategies implemented in `src/advanced/`.
+- **Logging**: All actions, errors, and dry-run outputs saved in `bot.log`.  
+- **Advanced Orders**: TWAP and Grid strategies available in `src/advanced/`.
+
+---
 
 ## Folder Structure
-
 prajakta-binance-bot/
 │
 ├── src/
@@ -30,76 +33,74 @@ prajakta-binance-bot/
 ├── README.md # Project documentation
 └── report.pdf # Screenshots & explanations
 
+yaml
+Copy code
 
+---
 
 ## Setup
 
-1. **Clone the repository**
-
+### 1. Clone Repository
 ```bash
 git clone https://github.com/prajaktaukirde/prajakta-binance-bot.git
 cd prajakta-binance-bot
-Create a virtual environment and activate it
-
+2. Create Virtual Environment
 bash
 Copy code
 python -m venv venv
-venv\Scripts\activate        # Windows
-# source venv/bin/activate   # Mac/Linux
-Install dependencies
-
+# Windows PowerShell
+.\venv\Scripts\Activate.ps1
+# Windows CMD
+venv\Scripts\activate.bat
+# macOS/Linux
+source venv/bin/activate
+3. Install Dependencies
 bash
 Copy code
 pip install -r requirements.txt
-API Setup
-Create a .env file in src/ with your Binance API keys:
-
-ini
-Copy code
-API_KEY=your_binance_api_key
-API_SECRET=your_binance_api_secret
-How to Run
-Test all orders in dry-run mode
-
-bash
-Copy code
-python src/test_all_orders.py
-Run individual orders
-
-bash
-Copy code
-python src/market_orders.py BTCUSDT BUY 0.01
-python src/limit_orders.py BTCUSDT SELL 0.01 45000
-Advanced OCO order (dry-run)
+4. Configure API Keys
+Set your Binance API keys in config.py or as environment variables:
 
 python
 Copy code
-from advanced.oco import execute_oco
+API_KEY = "your_api_key"
+API_SECRET = "your_api_secret"
+Usage
+Market Order
+bash
+Copy code
+python src/market_orders.py BTCUSDT BUY 0.01
+Limit Order
+bash
+Copy code
+python src/limit_orders.py BTCUSDT SELL 0.01 45000
+Test All Orders (Dry-run)
+bash
+Copy code
+python src/test_all_orders.py
+Advanced Orders
+Use scripts in src/advanced/ for TWAP or Grid strategies.
 
-execute_oco(
-    symbol="BTCUSDT",
-    side="BUY",
-    qty=0.001,
-    stop_price=44000,
-    stop_limit_price=43990,
-    dry=True
-)
-Notes
-Default mode is dry-run. Remove dry=True to place real trades.
+Logging
+All actions, errors, and dry-run outputs are logged in bot.log.
 
-Verify OCO take-profit and stop prices before executing live trades.
+Example log:
 
-Logs are stored in src/bot.log with timestamps and error traces.
+less
+Copy code
+[INFO] Preparing MARKET order | BTCUSDT BUY 0.01
+[INFO] [DRY RUN] Order prepared: {...}
+[ERROR] Invalid order: ...
+Submission
+Submit .zip file: prajakta_binance_bot.zip with folder structure intact.
 
-Grid strategy is optional and can be uncommented if implemented.
+Push code to private GitHub repo: https://github.com/prajaktaukirde/prajakta-binance-bot
 
-Resources
-Binance Futures API Docs
+Include README.md and report.pdf.
 
-Historical Data (Optional)
+References
+Binance Futures API Docs: https://binance-docs.github.io/apidocs/futures/en/
 
-Fear & Greed Index (Bonus)
+Historical Data: Download
 
-Author
-Prajakta Ukirde
-GitHub: https://github.com/prajaktaukirde
+Fear & Greed Index (Bonus): Download
