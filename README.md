@@ -86,3 +86,27 @@ Example log:
 [INFO] Preparing MARKET order | BTCUSDT BUY 0.01
 [INFO] [DRY RUN] Order prepared: {...}
 [ERROR] Invalid order: ...
+
+
+---
+
+## Quick Start
+
+| Order Type         | Command / Script Example                                  | Notes                                |
+|-------------------|-----------------------------------------------------------|--------------------------------------|
+| Market Order       | `python src/market_orders.py BTCUSDT BUY 0.01`           | Executes a market buy order           |
+| Limit Order        | `python src/limit_orders.py BTCUSDT SELL 0.01 45000`    | Places a limit sell at 45,000 USDT   |
+| Test All Orders    | `python src/test_all_orders.py`                          | Runs dry-run for Market, Limit, OCO  |
+| OCO Order (Advanced) | `python src/advanced/oco.py`                             | Execute OCO take-profit + stop-limit |
+| TWAP Strategy      | `python src/advanced/twap.py`                             | Time-weighted average price strategy  |
+| Grid Strategy      | `python src/advanced/grid_strategy.py`                   | Optional grid trading strategy        |
+
+---
+
+## Notes
+1. Make sure your virtual environment is active before running commands.
+2. All logs are saved in `src/bot.log`.
+3. API keys can be set either in `config.py` or as environment variables:
+```python
+API_KEY = "your_api_key"
+API_SECRET = "your_api_secret"
